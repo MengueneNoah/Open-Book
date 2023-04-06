@@ -12,9 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * * 
  * @author Fortune
- *
- */
+ **/
 
 
 @Entity

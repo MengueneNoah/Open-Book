@@ -26,7 +26,7 @@ public class AuthorRepository implements AuthorInterface {
     }
 
     @Override
-    public List<Author> findAll() {
+    public synchronized List<Author> findAll() {
         List<Author> authors = new ArrayList<>();
         String sql = "SELECT * FROM authors";
         Statement statement = null;
@@ -51,7 +51,7 @@ public class AuthorRepository implements AuthorInterface {
     }
 
     @Override
-    public Author findById(int id) {
+    public synchronized Author findById(int id) {
         Author author = null;
         String sql = "SELECT * FROM authors WHERE id_author=?";
        
@@ -72,7 +72,7 @@ public class AuthorRepository implements AuthorInterface {
     }
 
     @Override
-    public void create(Author author) {
+    public synchronized void create(Author author) {
         String sql = "INSERT INTO authors (name, nationality) VALUES (?, ?)";
        
         try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
@@ -86,7 +86,7 @@ public class AuthorRepository implements AuthorInterface {
     }
 
     @Override
-    public void update(Author author) {
+    public synchronized void update(Author author) {
         String sql = "UPDATE authors SET name=?, nationality=? WHERE id_author=?";
         
         try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
@@ -102,7 +102,7 @@ public class AuthorRepository implements AuthorInterface {
     }
 
     @Override
-    public void delete(int id) {
+    public synchronized void delete(int id) {
          String sql = "DELETE FROM authors WHERE id_author=?";
        
          try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
