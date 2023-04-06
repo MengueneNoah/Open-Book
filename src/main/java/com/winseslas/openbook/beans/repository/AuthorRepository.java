@@ -54,16 +54,15 @@ public class AuthorRepository implements AuthorInterface {
     public Author findById(int id) {
         Author author = null;
         String sql = "SELECT * FROM authors WHERE id_author=?";
-        try {
-            try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
-                pstmt.setInt(1, id);
-                try (ResultSet rs = pstmt.executeQuery()) {
-                    if (rs.next()) {
-                        author = new Author();
-                        author.setId(rs.getInt("id_author"));
-                        author.setName(rs.getString("name"));
-                        author.setNationality(rs.getString("nationality"));
-                    }
+       
+        try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    author = new Author();
+                    author.setId(rs.getInt("id_author"));
+                    author.setName(rs.getString("name"));
+                    author.setNationality(rs.getString("nationality"));
                 }
             }
         } catch (SQLException se) {
@@ -75,13 +74,13 @@ public class AuthorRepository implements AuthorInterface {
     @Override
     public void create(Author author) {
         String sql = "INSERT INTO authors (name, nationality) VALUES (?, ?)";
-        try {
-            try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
-                pstmt.setString(1, author.getName());
-                pstmt.setString(2, author.getNationality());
-                pstmt.executeUpdate();
-            }
-        } catch (SQLException se) {
+       
+        try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
+            pstmt.setString(1, author.getName());
+            pstmt.setString(2, author.getNationality());
+            pstmt.executeUpdate();
+        }
+    catch (SQLException se) {
             se.printStackTrace();
         }
     }
@@ -89,14 +88,14 @@ public class AuthorRepository implements AuthorInterface {
     @Override
     public void update(Author author) {
         String sql = "UPDATE authors SET name=?, nationality=? WHERE id_author=?";
-        try {
-            try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
-                pstmt.setString(1, author.getName());
-                pstmt.setString(2, author.getNationality());
-                pstmt.setInt(3, author.getId());
-                pstmt.executeUpdate();
-            }
-        } catch (SQLException se) {
+        
+        try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
+            pstmt.setString(1, author.getName());
+            pstmt.setString(2, author.getNationality());
+            pstmt.setInt(3, author.getId());
+            pstmt.executeUpdate();
+        }
+        catch (SQLException se) {
             se.printStackTrace();
         }
 
@@ -105,11 +104,10 @@ public class AuthorRepository implements AuthorInterface {
     @Override
     public void delete(int id) {
          String sql = "DELETE FROM authors WHERE id_author=?";
-        try {
-             try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
-                 pstmt.setInt(1, id);
-                 pstmt.executeUpdate();
-             }
+       
+         try (PreparedStatement pstmt = connect.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             pstmt.executeUpdate();
         } catch (SQLException se) {
             se.printStackTrace();
         }

@@ -58,24 +58,9 @@ public class HomeServlet extends HttpServlet {
                 "J'ai travaillé avec OpenBook pendant deux ans et j'ai été impressionné par leur engagement envers la qualité et la satisfaction du client.")
         );
         
-        List<Author> authors = null;
-        AuthorRepository authorRepository;
-		try {
-			authorRepository = new AuthorRepository();
-			authors = authorRepository.findAll();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-       
-      
-        
-       
-      
-        
+          
         request.setAttribute("testimonials", testimonials);
-        request.setAttribute("auteurs", authors);
-		
+       
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Home.jsp");
 		rd.forward(request, response);
 		

@@ -43,17 +43,6 @@
           </p>
         </div>
       </div>
-       <p>Information sur l'auteur </p>
-    
-	    <c:forEach var="author" items="${auteurs}">
-	        
-	        <div>
-	            <p>ID : ${author.getId()}</p>
-	            <p>Name : ${author.getName()}  </p>
-	            <p>Nationality : ${author.getNationality()}</p>
-	        </div>
-	    </c:forEach>
-
 
       <div class="row text-center container">
         <c:forEach var="testimonial" items="${testimonials}">
