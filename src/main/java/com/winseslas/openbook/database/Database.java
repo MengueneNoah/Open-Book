@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class Database {
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/tp_javaee";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/openbook";
     private static final String DB_USER = "root";
     private static final String DB_PASS = "";
 
