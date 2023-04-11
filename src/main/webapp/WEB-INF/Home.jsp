@@ -9,6 +9,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -75,7 +76,7 @@
       Que vous soyez un lecteur assidu ou que vous cherchiez simplement à passer un moment agréable en feuilletant un
       bon livre, la bibliothèque X est l'endroit parfait pour vous. Nous sommes impatients de vous accueillir et de vous
       aider à découvrir votre prochaine lecture préférée.</p>
-    <button class="btn btn-primary fw-bold py-3 px-5 rounded">Besoin d'un service</button>
+    <a href='#' class="btn btn-primary fw-bold py-3 px-5 rounded">Besoin d'un service</a>
   </div>
 
 

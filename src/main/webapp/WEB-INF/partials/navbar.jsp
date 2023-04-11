@@ -18,7 +18,7 @@
         </li>
     
         <li class="nav-item">
-          <a class="nav-link" href="#" id="contact-link">Contact</a>
+          <a class="nav-link" href="/OpenBook/ContactServlet" id="contact-link">Contact</a>
         </li>
         
         <li class="nav-item">
