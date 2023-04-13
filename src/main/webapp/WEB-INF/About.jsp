@@ -86,8 +86,8 @@
 
         <div class="row pb-3">
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3  text-center rounded-3" style="background-color: #33333377">
               <div class="member-img">
                 <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
@@ -98,14 +98,14 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
+                <h4>Kamdem Fokom Bismark</h4>
                 <span>Chief Executive Officer</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 text-center rounded-3" style="background-color: #33333377">
               <div class="member-img">
                 <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
@@ -116,14 +116,14 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
+                <h4>Menguene Noah Chantal</h4>
                 <span>Product Manager</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 text-center rounded-3" style="background-color: #33333377">
               <div class="member-img">
                 <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
@@ -134,26 +134,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
-              <div class="member-img">
-                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Eyebe Eloundou Joel Cedric</h4>
+                <span>Developpeur Back-end</span>
               </div>
             </div>
           </div>
