@@ -12,9 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.winseslas.openbook.beans.models.Documents;
 import com.winseslas.openbook.beans.models.DocumentType;
-
+import com.winseslas.openbook.beans.models.Documents;
 import com.winseslas.openbook.beans.repository.DocumentTypeRepository;
 import com.winseslas.openbook.beans.repository.DocumentsRepository;
 
