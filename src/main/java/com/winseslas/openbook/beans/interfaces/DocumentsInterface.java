@@ -13,6 +13,8 @@ public interface DocumentsInterface {
     
     List<Documents> findByType(String type);
     
+    List<Documents> findByFilters(String title, String author, String type, String publishingHouse);
+    
     Documents findById(int id);
     
     boolean create(Documents document);

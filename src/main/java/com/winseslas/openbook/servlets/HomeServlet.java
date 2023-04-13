@@ -26,7 +26,7 @@ import com.winseslas.openbook.beans.repository.PublishingHouseRepository;
 /**
  * Servlet implementation class HomeServlet
  */
-@WebServlet(asyncSupported = true, urlPatterns = { "/" })
+@WebServlet("/")
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -111,8 +111,36 @@ public class HomeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
+	    String title = request.getParameter("title");
+	    String author = request.getParameter("author");
+	    String type = request.getParameter("type");
+	    String publishing_house = request.getParameter("publishing_house");
+
+	    List<Documents> documents = new ArrayList<>();
+	    
+	    System.out.println("Title: " + title);
+	    System.out.println("Author: " + author);
+	    System.out.println("Type: " + type);
+	    System.out.println("Publishing House: " + publishing_house);
+
+	    try {
+	        DocumentsRepository documentsRepository = new DocumentsRepository();
+	        documents = documentsRepository.findByFilters(title, author, type, publishing_house);
+	        
+	        for (Documents doc : documents) {
+	        	System.out.println("Livre : " + doc.getTitle());
+	        	System.out.println("Maison de publication : " + doc.getPublishingHouse().getName());
+	        	System.out.println("Auteur : " + doc.getAuthor().getName());
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    
+	    request.setAttribute("documents", documents);
+	    
+	    this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
 	}
+
 
 }

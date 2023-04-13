@@ -118,5 +118,87 @@ public class DocumentsRepository implements DocumentsInterface {
 		return false;
 	}
 
+	@Override
+	public List<Documents> findByFilters(String title, String authorId, String typeId, String publishingHouseId) {
+	    List<Documents> documents = new ArrayList<>();
+	    String sql = "SELECT d.*, t.*, a.*, p.* "
+	            + "	FROM Documents d"
+	            + "	INNER JOIN document_type t ON d.id_type_doc = t.id_type_doc"
+	            + "	INNER JOIN authors a ON d.id_author = a.id_author"
+	            + "	INNER JOIN publishing_house p ON d.id_publishing_house = p.id_publishing_house"
+	            + " WHERE 1 = 1"; // Clause pour construire dynamiquement la requête
+
+	    if (title != null && !title.isEmpty()) {
+	        sql += " AND d.document_title LIKE ?";
+	    }
+	    if (authorId != null && !authorId.isEmpty()) {
+	        sql += " AND d.id_author = ?";
+	    }
+	    if (typeId != null && !typeId.isEmpty()) {
+	        sql += " AND d.id_type_doc = ?";
+	    }
+	    if (publishingHouseId != null && !publishingHouseId.isEmpty()) {
+	        sql += " AND d.id_publishing_house = ?";
+	    }
+
+	    try {
+	        PreparedStatement statement = connect.prepareStatement(sql);
+
+	        int parameterIndex = 1; // Index des paramètres dans la requête préparée
+
+	        if (title != null && !title.isEmpty()) {
+	            statement.setString(parameterIndex++, "%" + title + "%");
+	        }
+	        if (authorId != null && !authorId.isEmpty()) {
+	            statement.setInt(parameterIndex++, Integer.parseInt(authorId));
+	        }
+	        if (typeId != null && !typeId.isEmpty()) {
+	            statement.setInt(parameterIndex++, Integer.parseInt(typeId));
+	        }
+	        if (publishingHouseId != null && !publishingHouseId.isEmpty()) {
+	            statement.setInt(parameterIndex++, Integer.parseInt(publishingHouseId));
+	        }
+
+	        ResultSet result = statement.executeQuery();
+
+	        while (result.next()) {
+	        	Documents document = new Documents();
+
+	            document.setId(result.getInt("id_doc"));
+	            document.setTitle(result.getString("document_title"));
+
+	            DocumentType documentType = new DocumentType();
+	            documentType.setId(result.getInt("id_type_doc"));
+	            documentType.setLibelle(result.getString("libelle_type_doc"));
+
+	            document.setType(documentType);
+
+	            Author authorObj = new Author();
+	            authorObj.setId(result.getInt("id_author"));
+	            authorObj.setName(result.getString("name"));
+	            authorObj.setNationality(result.getString("nationality"));
+	            document.setAuthor(authorObj);
+
+	            PublishingHouse publishingHouseObj = new PublishingHouse();
+	            publishingHouseObj.setId(result.getInt("id_publishing_house"));
+	            publishingHouseObj.setName(result.getString("name_publishing_house"));
+	            publishingHouseObj.setAddress(result.getString("address"));
+	            publishingHouseObj.setCity(result.getString("city"));
+	            publishingHouseObj.setCountry(result.getString("country"));
+
+	            document.setPublishingHouse(publishingHouseObj);
+	            document.setPublicationDate(result.getTimestamp("date_publication").toLocalDateTime().toLocalDate());
+	            document.setSummary(result.getString("resume"));
+	            documents.add(document);
+	        }
+
+	    } catch (SQLException se) {
+	        se.printStackTrace();
+	    }
+	    return documents;
+	}
+
+
+
 
 }
