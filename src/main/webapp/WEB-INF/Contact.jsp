@@ -53,9 +53,11 @@
             </div>
           </div>
         </div>
+        
+        <div class="mx-auto my-3" style="height: 2px; width: 50%; background-color: black;"></div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-xl-9 col-lg-12 mt-4">
+          <div class="col-xl-9 col-lg-12 mt-4 mb-5">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">

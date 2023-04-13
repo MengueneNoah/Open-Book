@@ -79,8 +79,8 @@
 		<section id="team" class="team section-bg">
       <div class="container">
 
-        <div class="section-title">
-          <h2 data-aos="fade-up">Team</h2>
+        <div class="section-title text-center pb-3">
+          <h2 data-aos="fade-up pb-3">Team</h2>
           <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
