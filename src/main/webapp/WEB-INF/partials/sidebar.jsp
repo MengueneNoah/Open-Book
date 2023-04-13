@@ -3,61 +3,38 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i class="bi bi-speedometer"></i>
         </div>
         <div class="sidebar-brand-text mx-3">OpenBook</div>
     </a>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Tableau de bord -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Tableau de bord</span></a>
-    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Librarie
+        
+        <li class="nav-item">
+		    <a class="nav-link" href="#">
+		        <i class="bi bi-person-bounding-box"></i>
+		        <span>Auteurs</span>
+		    </a>
+		
+		    <a class="nav-link" href="#">
+		        <i class="bi bi-book-half"></i>
+		        <span>Livres</span>
+		    </a>
+		
+		    <a class="nav-link" href="#">
+		        <i class="bi bi-building-fill"></i>
+		        <span>Maison d'édition</span>
+		    </a>
+		</li>
+        
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Documents</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Nos articles</h6>
-                <a class="collapse-item" href="">Livres</a>
-                <a class="collapse-item" href="">Exemplaires</a>
-            </div>
-        </div>
-    </li>
 
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Librairie</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Articles</h6>
-                <a class="collapse-item" href="">Autheur</a>
-                <a class="collapse-item" href="">Livres</a>
-                <a class="collapse-item" href="">Maison d'édition</a>
-            </div>
-        </div>
-    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

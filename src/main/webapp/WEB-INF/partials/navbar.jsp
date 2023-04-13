@@ -22,13 +22,13 @@
         </li>
         
         <li class="nav-item">
-            <a class="btn btn-primary" href="/OpenBook/loginServlet" style="margin-right: 5px;" type="button" id="signin-button">Sign In</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="btn btn-success" href="/OpenBook/RegisterServlet" type="button" id="signup-button">Sign Up</a>
-        </li>
-        
+	        <a class="btn btn-primary" href="/OpenBook/LoginServlet" style="margin-right: 5px;" id="signin-link">Sign In</a>
+	    </li>
+	    
+	    <li class="nav-item">
+	      <a class="btn btn-success" href="/OpenBook/RegisterServlet" id="signup-link">Sign Up</a>
+	    </li>
+               
       </ul>
     </div>
   </div>
@@ -48,9 +48,14 @@
   }
   
   // Ajout de la classe "active" sur le bouton correspondant
-  if (currentLink === "/OpenBook/SignInServlet") {
-    document.getElementById("signin-button").classList.add("active");
-  } else if (currentLink === "/OpenBook/SignUpServlet") {
-    document.getElementById("signup-button").classList.add("active");
+  if (currentLink === "/OpenBook/LoginServlet") {
+    document.getElementById("signin-link").classList.add("active");
+  } else if (currentLink === "/OpenBook/RegisterServlet") {
+    document.getElementById("signup-link").classList.add("active");
+  }
+  
+  // Masquage du bouton "Sign Up" si on n'est pas sur la page "Sign In"
+  if (currentLink !== "/OpenBook/LoginServlet") {
+    document.getElementById("signup-link").style.display = "none";
   }
 </script>

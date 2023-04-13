@@ -96,9 +96,55 @@ public class DocumentsRepository implements DocumentsInterface {
 
 	@Override
 	public Documents findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	    Documents document = null;
+	    String sql = "SELECT d.*, t.*, a.*, p.* "
+	            + "FROM Documents d"
+	            + " INNER JOIN document_type t ON d.id_type_doc = t.id_type_doc"
+	            + " INNER JOIN authors a ON d.id_author = a.id_author"
+	            + " INNER JOIN publishing_house p ON d.id_publishing_house = p.id_publishing_house"
+	            + " WHERE d.id_doc = ?"; // Requête SQL avec un paramètre pour l'ID du document
+
+	    try {
+	        PreparedStatement statement = connect.prepareStatement(sql);
+	        statement.setInt(1, id); // Remplacer le paramètre dans la requête SQL par la valeur de l'ID
+
+	        ResultSet result = statement.executeQuery();
+
+	        if (result.next()) {
+	            document = new Documents();
+
+	            document.setId(result.getInt("id_doc"));
+	            document.setTitle(result.getString("document_title"));
+
+	            DocumentType documentType = new DocumentType();
+	            documentType.setId(result.getInt("id_type_doc"));
+	            documentType.setLibelle(result.getString("libelle_type_doc"));
+
+	            document.setType(documentType);
+
+	            Author author = new Author();
+	            author.setId(result.getInt("id_author"));
+	            author.setName(result.getString("name"));
+	            author.setNationality(result.getString("nationality"));
+	            document.setAuthor(author);
+
+	            PublishingHouse publishingHouse = new PublishingHouse();
+	            publishingHouse.setId(result.getInt("id_publishing_house"));
+	            publishingHouse.setName(result.getString("name_publishing_house"));
+	            publishingHouse.setAddress(result.getString("address"));
+	            publishingHouse.setCity(result.getString("city"));
+	            publishingHouse.setCountry(result.getString("country"));
+
+	            document.setPublishingHouse(publishingHouse);
+	            document.setPublicationDate(result.getTimestamp("date_publication").toLocalDateTime().toLocalDate());
+	            document.setSummary(result.getString("resume"));
+	        }
+	    } catch (SQLException se) {
+	        se.printStackTrace();
+	    }
+	    return document;
 	}
+
 
 	@Override
 	public boolean create(Documents document) {
