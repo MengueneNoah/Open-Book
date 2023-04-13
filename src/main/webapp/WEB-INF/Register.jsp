@@ -20,74 +20,60 @@
 
 <jsp:include page="partials/navbar.jsp" />
 
-
-
-<section class="vh-100" style=" margin-bottom: 150px;  margin-top: 100px  ">
-  <div class="container h-100">
+<section class="gradient-custom" style="background: linear-gradient(to bottom, #000000dd, #00000077), url(https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg); background-size: cover;">
+  <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+            <div class="mb-md-5 mt-md-4 pb-5">
 
-                <form class="mx-1 mx-md-4">
+              <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" />
-                      <label class="form-label" for="form3Example1c">Your Name</label>
-                    </div>
-                  </div>
+              <div class="form-outline form-white text-start mb-4">
+              	<label class="form-label" for="typeEmailX">Name</label>
+                <input type="text" id="typeEmailX" class="form-control form-control-lg" />
+              </div>
+              
+              <div class="form-outline form-white text-start mb-4">
+              	<label class="form-label" for="typeEmailX">Email</label>
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+              </div>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" class="form-control" />
-                      <label class="form-label" for="form3Example3c">Your Email</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" class="form-control" />
-                      <label class="form-label" for="form3Example4c">Password</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" class="form-control" />
-                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                    </div>
-                  </div>
-
-                  <div class="form-check d-flex justify-content-center mb-5">
+              <div class="form-outline text-start form-white mb-4">
+              <label class="form-label" for="typePasswordX">Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+              </div>
+              
+              <div class="form-outline text-start form-white mb-4">
+              <label class="form-label" for="typePasswordX">Confirm Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+              </div>
+              
+              <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                     <label class="form-check-label" for="form2Example3">
                       I agree all statements in <a href="#!">Terms of service</a>
                     </label>
-                  </div>
+                </div>
+                
+              <button class="btn btn-outline-light btn-lg px-5" type="submit">Register</button>
 
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg">Register</button>
-                  </div>
-
-                </form>
-
+              <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
               </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image">
-
-              </div>
             </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign In</a>
+              </p>
+            </div>
+
           </div>
         </div>
       </div>

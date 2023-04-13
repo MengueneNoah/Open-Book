@@ -62,7 +62,7 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp" />
-<section class="gradient-custom">
+<section class="gradient-custom" style="background: linear-gradient(to bottom, #000000dd, #00000077), url(https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg); background-size: cover;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -74,14 +74,14 @@
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
-              <div class="form-outline form-white mb-4">
+              <div class="form-outline form-white text-start mb-4">
+              	<label class="form-label" for="typeEmailX">Email</label>
                 <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Email</label>
               </div>
 
-              <div class="form-outline form-white mb-4">
+              <div class="form-outline text-start form-white mb-4">
+              <label class="form-label" for="typePasswordX">Password</label>
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
