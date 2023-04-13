@@ -32,33 +32,39 @@
 					</div>
 					<div
 						class="col-xl-7 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-						<h2 >À propos de Open Book</h2>
-						<h3 >Découvrez notre librairie numérique</h3>
-						<p  style="text-align: justify;">Open Book est une librairie numérique proposant une large sélection de
+						<h1 >À propos de Open Book</h1>
+						<h4 class="mb-3" >Découvrez notre librairie numérique</h4>
+						<p class="mt-2" style="text-align: justify;">Open Book est une librairie numérique proposant une large sélection de
 							livres électroniques de qualité. Nous mettons à disposition des lecteurs des ouvrages de
 							différents genres, allant de la fiction à la non-fiction, en passant par les ouvrages de
 							référence. Grâce à notre plateforme, vous pouvez découvrir et lire des livres depuis votre
 							ordinateur, tablette ou téléphone portable, où que vous soyez dans le monde.</p>
 
 						<div class="icon-box" >
-							<div class="icon"><i class="bi bi-patch-check-fill"></i></div>
-							<h4 class="title"><a href="#">Qualité garantie</a></h4>
+							<div class="d-flex align-items-center">
+								<div class="icon me-2"><i class="bi bi-patch-check-fill"></i></div>
+								<h4 class="title"><a class="text-dark" href="#">Qualité garantie</a></h4>
+							</div>
 							<p class="description">Tous les livres proposés sur Open Book sont soigneusement
 								sélectionnés pour leur qualité et leur pertinence, afin de garantir une expérience de
 								lecture agréable pour nos utilisateurs.</p>
 						</div>
 
 						<div class="icon-box"  data-aos-delay="100">
-							<div class="icon"><i class="bi bi-star-fill"></i></div>
-							<h4 class="title"><a href="#">Offres spéciales</a></h4>
+							<div class="d-flex align-items-center">
+								<div class="icon me-2"><i class="bi bi-star-fill"></i></div>
+								<h4 class="title"><a class="text-dark" href="#">Offres spéciales</a></h4>
+							</div>
 							<p class="description">Nous proposons régulièrement des offres spéciales sur certains
 								livres, ainsi que des réductions pour les utilisateurs réguliers. Inscrivez-vous à notre
 								newsletter pour être tenu informé de nos promotions en cours.</p>
 						</div>
 
 						<div class="icon-box" >
-							<div class="icon"><i class="bi bi-globe"></i></div>
-							<h4 class="title"><a href="#">Plateforme conviviale</a></h4>
+							<div class="d-flex align-items-center">
+								<div class="icon me-2"><i class="bi bi-globe"></i></div>
+								<h4 class="title"><a class="text-dark" href="#">Plateforme conviviale</a></h4>
+							</div>
 							<p class="description">Notre plateforme a été conçue pour offrir une expérience utilisateur
 								simple et intuitive. Trouvez facilement les livres que vous recherchez grâce à notre
 								fonction de recherche avancée, et gérez votre bibliothèque numérique depuis votre compte
@@ -78,12 +84,12 @@
           <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="row">
+        <div class="row pb-3">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="member">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
               <div class="member-img">
-                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -99,9 +105,9 @@
           </div>
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
               <div class="member-img">
-                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -117,9 +123,9 @@
           </div>
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
               <div class="member-img">
-                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -135,9 +141,9 @@
           </div>
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
+            <div class="member shadow-lg px-2 pt-2 pb-5 mb-3 rounded-3" style="background-color: #33333377">
               <div class="member-img">
-                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <img src="https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg" class="mb-3 img-fluid shadow-lg rounded-3" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>

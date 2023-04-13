@@ -14,6 +14,26 @@
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
+  <style type="text/css">
+	  select.form-control {
+		    padding: 50px 24px;
+		}
+		.card {
+			background-color: #444444dd;
+			color: white;
+		}
+		.card-body {
+			color: white;
+		}
+		td {
+			color: white!important;
+		}
+		intro-section {
+			background-color: #f3f2f2!important;
+		}
+  </style>
+  
   <script>
     $(document).ready(function () {
       $('#type').select2({
@@ -65,18 +85,20 @@
   <jsp:include page="partials/navbar.jsp" />
    <jsp:include page="partials/details.jsp" />
 
-  <div style="margin-top: 60px; margin-bottom: 30px"
-    class="inset-0 px-5 opacity-75 d-flex flex-column justify-content-center align-items-center">
-    <h1 class="text-center text-dark fw-bold fs-3 mb-4">La bibliothèque OpenBook est l'endroit <span
-        class="text-primary">fournisseur digital</span> <br /> idéal pour tous les amoureux de la lecture</h1>
+  <div  style="padding-top: 60px; padding-bottom: 30px; background-color: #f3f2f2;"
+    class="inset-0 px-5 opacity-75 d-flex flex-column justify-content-center align-items-center intro-section">
+    <h1 class="text-center text-dark fw-bold fs-3 mb-4">
+    	La bibliothèque OpenBook est l'endroit <span
+        class="text-primary">fournisseur digital</span> <br /> idéal pour tous les amoureux de la lecture
+    </h1>
     <p class="text-center text-black mb-4">Notre équipe de bibliothécaires passionnés est à votre disposition pour vous
       aider à trouver les documents qui vous intéressent et vous conseiller sur les nouveautés littéraires à ne pas
       manquer. Nous organisons également régulièrement des événements tels que des clubs de lecture, des conférences et
-      des séances de dédicaces pour offrir à nos lecteurs une expérience encore plus enrichissante.<br />
+      des séances de dédicaces pour offrir à nos lecteurs une expérience encore plus enrichissante.<br /><br />
       Que vous soyez un lecteur assidu ou que vous cherchiez simplement à passer un moment agréable en feuilletant un
       bon livre, la bibliothèque X est l'endroit parfait pour vous. Nous sommes impatients de vous accueillir et de vous
       aider à découvrir votre prochaine lecture préférée.</p>
-    <a href='#' class="btn btn-primary fw-bold py-3 px-5 rounded">Besoin d'un service</a>
+    <a href='#' class="btn btn-primary fw-bold py- 	3 px-5 rounded">Besoin d'un service</a>
   </div>
 
 
@@ -87,7 +109,7 @@
         <div class="my-3">
           <div class="row">
             <div class="col-sm-3">
-              <select class="form-control" id="title" name="title">
+              <select class="form-control py-3 px-2" id="title" name="title">
                 <option value="">Title</option>
                 <c:forEach var="doc" items="${documents}">
                   <option value="${ doc.getId() }">${ doc.getTitle() }</option>
@@ -96,7 +118,7 @@
             </div>
 
             <div class="col-sm-3">
-              <select class="form-control" id="author" name="author">
+              <select class="form-control pb-5" id="author" name="author">
                 <option value="">Auteur</option>
                 <c:forEach var="author" items="${authors}">
                   <option value="${ author.getId() }">${ author.getName() }</option>
@@ -105,7 +127,7 @@
             </div>
 
             <div class="col-sm-3">
-              <select class="form-control" id="type" name="type">
+              <select class="form-control pb-5" style="background: blue!important;" id="type" name="type">
                 <option value="">Sélectionnez un type de document</option>
                 <c:forEach var="documentType" items="${types}">
                   <option value="${ documentType.getId() }">${ documentType.getLibelle() }</option>

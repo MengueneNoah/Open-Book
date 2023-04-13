@@ -62,7 +62,7 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp" />
-<section class="gradient-custom">
+<section class="gradient-custom" style="background: linear-gradient(to bottom, #000000dd, #00000077), url(https://bootstrapmade.com/demo/templates/Flexor/assets/img/team/team-2.jpg); background-size: cover;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">

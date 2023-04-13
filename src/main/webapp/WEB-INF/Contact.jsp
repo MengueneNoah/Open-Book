@@ -23,8 +23,8 @@
     <section id="contact" class="contact">
       <div class="container">
 
-        <div class="section-title">
-          <h2 data-aos="fade-up">Contact</h2>
+        <div class="section-title text-center pt-4">
+          <h2 data-aos="fade-up text-center">Contact</h2>
           <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -38,14 +38,14 @@
             </div>
           </div>
 
-          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-3 col-lg-4 mt-4 text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="info-box">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
               <p>info@example.com<br>contact@example.com</p>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-xl-3 col-lg-4 mt-4 text-end" data-aos="fade-up" data-aos-delay="200">
             <div class="info-box">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
