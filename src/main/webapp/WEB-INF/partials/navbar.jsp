@@ -22,11 +22,11 @@
         </li>
         
         <li class="nav-item">
-            <button class="btn btn-primary" style="margin-right: 5px;" type="button" id="signin-button">Sign In</button>
+            <a class="btn btn-primary" href="/OpenBook/loginServlet" style="margin-right: 5px;" type="button" id="signin-button">Sign In</a>
         </li>
         
         <li class="nav-item">
-          <button class="btn btn-success" type="button" id="signup-button">Sign Up</button>
+          <a class="btn btn-success" href="/OpenBook/RegisterServlet" type="button" id="signup-button">Sign Up</a>
         </li>
         
       </ul>
