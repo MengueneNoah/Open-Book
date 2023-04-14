@@ -13,26 +13,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/OpenBook/">OpenBook</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/OpenBook/" id="home-link">Retour</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-	<br/><br/><br/><br/><br/><br/>
+	
     <!--Modal: modalRelatedContent-->
     <div class="modal" id="myModalDetailPageError">
         <div class="modal-dialog">
@@ -58,8 +39,7 @@
             </div>
         </div>
     </div>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<jsp:include page="partials/footer.jsp" />
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"

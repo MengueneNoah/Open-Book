@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
   <div class="container-fluid">
     <a class="navbar-brand" href="/OpenBook/">OpenBook</a>
@@ -8,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-                      
+
         <li class="nav-item">
           <a class="nav-link" href="/OpenBook/" id="home-link">Home</a>
         </li>
@@ -16,19 +15,15 @@
         <li class="nav-item">
           <a class="nav-link" href="/OpenBook/AboutServlet" id="about-link">About</a>
         </li>
-    
+
         <li class="nav-item">
           <a class="nav-link" href="/OpenBook/ContactServlet" id="contact-link">Contact</a>
         </li>
-        
+
         <li class="nav-item">
-	        <a class="btn btn-primary" href="/OpenBook/LoginServlet" style="margin-right: 5px;" id="signin-link">Sign In</a>
-	    </li>
-	    
-	    <li class="nav-item">
-	      <a class="btn btn-success" href="/OpenBook/RegisterServlet" id="signup-link">Sign Up</a>
-	    </li>
-               
+          <a class="btn btn-primary" href="/OpenBook/LoginServlet" style="margin: 5px;" id="signin-link">Sign In</a>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -45,17 +40,8 @@
     document.getElementById("about-link").classList.add("active");
   } else if (currentLink === "/OpenBook/ContactServlet") {
     document.getElementById("contact-link").classList.add("active");
+  } else if (currentLink === "/OpenBook/LoginServlet") {
+    document.getElementById("signin-link").style.display = "none"; // Masquer le bouton "Sign Up" sur la page "Sign In"
   }
-  
-  // Ajout de la classe "active" sur le bouton correspondant
-  if (currentLink === "/OpenBook/LoginServlet") {
-    document.getElementById("signin-link").classList.add("active");
-  } else if (currentLink === "/OpenBook/RegisterServlet") {
-    document.getElementById("signup-link").classList.add("active");
-  }
-  
-  // Masquage du bouton "Sign Up" si on n'est pas sur la page "Sign In"
-  if (currentLink !== "/OpenBook/LoginServlet") {
-    document.getElementById("signup-link").style.display = "none";
-  }
+
 </script>

@@ -10,103 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
 
-<<<<<<< HEAD
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  
-  <style type="text/css">
-	  select.form-control {
-		    padding: 50px 24px;
-		}
-		.card {
-			background-color: #444444dd;
-			color: white;
-		}
-		.card-body {
-			color: white;
-		}
-		td {
-			color: white!important;
-		}
-		intro-section {
-			background-color: #f3f2f2!important;
-		}
-  </style>
-  
-  <script>
-    $(document).ready(function () {
-      $('#type').select2({
-        placeholder: 'Sélectionnez un type de documents'
-      });
-
-      $('#title').select2({
-        placeholder: 'Sélectionnez un titre'
-      });
-
-      $('#author').select2({
-        placeholder: 'Sélectionnez un auteur'
-      });
-
-      $('#publishing_house').select2({
-        placeholder: "Sélectionnez une maison d'édition"
-      });
-    });
-    
-	 // Récupération du bouton et du modal
-    var modalBtn = document.getElementById("modalBtn");
-    var modal = document.getElementById("modalRelatedContent");
-
-    // Ajout de l'événement clic au bouton
-    modalBtn.addEventListener("click", function() {
-      modal.style.display = "block";
-    });
-
-    // Fermeture du modal lorsque l'utilisateur clique sur le bouton de fermeture
-    modal.querySelector(".close").addEventListener("click", function() {
-      modal.style.display = "none";
-    });
-
-    // Fermeture du modal lorsque l'utilisateur clique en dehors du modal
-    window.addEventListener("click", function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-
-  </script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <title>OpenBook - Home </title>
-=======
     <title>OpenBook - Home </title>
->>>>>>> fffcb1b55e80daf3b5795a5a83ba663e4c832c11
 
 </head>
 
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-<<<<<<< HEAD
-  <div  style="padding-top: 60px; padding-bottom: 30px; background-color: #f3f2f2;"
-    class="inset-0 px-5 opacity-75 d-flex flex-column justify-content-center align-items-center intro-section">
-    <h1 class="text-center text-dark fw-bold fs-3 mb-4">
-    	La bibliothèque OpenBook est l'endroit <span
-        class="text-primary">fournisseur digital</span> <br /> idéal pour tous les amoureux de la lecture
-    </h1>
-    <p class="text-center text-black mb-4">Notre équipe de bibliothécaires passionnés est à votre disposition pour vous
-      aider à trouver les documents qui vous intéressent et vous conseiller sur les nouveautés littéraires à ne pas
-      manquer. Nous organisons également régulièrement des événements tels que des clubs de lecture, des conférences et
-      des séances de dédicaces pour offrir à nos lecteurs une expérience encore plus enrichissante.<br /><br />
-      Que vous soyez un lecteur assidu ou que vous cherchiez simplement à passer un moment agréable en feuilletant un
-      bon livre, la bibliothèque X est l'endroit parfait pour vous. Nous sommes impatients de vous accueillir et de vous
-      aider à découvrir votre prochaine lecture préférée.</p>
-    <a href='#' class="btn btn-primary fw-bold py- 	3 px-5 rounded">Besoin d'un service</a>
-  </div>
-=======
     <div style="margin-top: 60px; margin-bottom: 30px"
         class="inset-0 px-5 opacity-75 d-flex flex-column justify-content-center align-items-center">
         <h1 class="text-center text-dark fw-bold fs-3 mb-4">La bibliothèque OpenBook est l'endroit <span
@@ -123,64 +33,12 @@
             bon livre, la bibliothèque OpenBook est l'endroit parfait pour vous. Nous sommes impatients de vous accueillir et
             de vous
             aider à découvrir votre prochaine lecture préférée.</p>
-        <a href='#' class="btn btn-primary fw-bold py-3 px-5 rounded">Besoin d'un service</a>
+        
     </div>
->>>>>>> fffcb1b55e80daf3b5795a5a83ba663e4c832c11
 
 
     <section class="mt-4 mb-4">
 
-<<<<<<< HEAD
-    <div class="container">
-      <form action="container">
-        <div class="my-3">
-          <div class="row">
-            <div class="col-sm-3">
-              <select class="form-control py-3 px-2" id="title" name="title">
-                <option value="">Title</option>
-                <c:forEach var="doc" items="${documents}">
-                  <option value="${ doc.getId() }">${ doc.getTitle() }</option>
-                </c:forEach>
-              </select>
-            </div>
-
-            <div class="col-sm-3">
-              <select class="form-control pb-5" id="author" name="author">
-                <option value="">Auteur</option>
-                <c:forEach var="author" items="${authors}">
-                  <option value="${ author.getId() }">${ author.getName() }</option>
-                </c:forEach>
-              </select>
-            </div>
-
-            <div class="col-sm-3">
-              <select class="form-control pb-5" style="background: blue!important;" id="type" name="type">
-                <option value="">Sélectionnez un type de document</option>
-                <c:forEach var="documentType" items="${types}">
-                  <option value="${ documentType.getId() }">${ documentType.getLibelle() }</option>
-                </c:forEach>
-              </select>
-            </div>
-
-            <div class="col-sm-3">
-              <select class="form-control" id="publishing_house" name="publishing_house">
-                <option value="">Sélectionnez une maison d'édition</option>
-                <c:forEach var="publishingHouse" items="${publishingHouses}">
-                  <option value="${ publishingHouse.getId() }">${ publishingHouse.getName() }</option>
-                </c:forEach>
-              </select>
-
-            </div>
-          </div>
-        </div>
-      </form>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <c:forEach items="${documents}" var="document" varStatus="loop">
-            <c:if test="${loop.index % 3 == 0}">
-              <div class="carousel-item ${loop.index == 0 ? 'active' : ''}">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-=======
         <div class="container">
             <form class="container" action="/" method="post">
                 <div class="my-3">
@@ -306,7 +164,6 @@
                         <c:if test="${(loop.index + 1) % 3 == 0 || loop.last}">
                 </div>
             </div>
->>>>>>> fffcb1b55e80daf3b5795a5a83ba663e4c832c11
             </c:if>
             </c:forEach>
         </div>

@@ -59,27 +59,40 @@ public class UserRepository implements UserInterface {
 
 	@Override
 	public synchronized Optional<User> findByEmail(String email) {
-		 User user = null;
-		 String sql = "SELECT * FROM users WHERE email=?";       
+	    String sql = "SELECT * FROM users WHERE email = ?";
+	    PreparedStatement selectStmt = null; // Initialiser à null
+	    try {
+	        selectStmt = connect.prepareStatement(sql);
+	        selectStmt.setString(1, email);
+	        ResultSet rs = selectStmt.executeQuery();
 
-		 try {
-			 pstmt = connect.prepareStatement(sql);
-			 pstmt.setString(1, email);
-			 result = pstmt.executeQuery();
-			 
-			 if (result.next()) {
-		         user = new User();
-		         user.setId(result.getInt("id_user"));
-			     user.setEmail(result.getString("email"));
-			     user.setPassword(result.getString("password"));
-			     user.setFullName(result.getString("fullname"));
-			     user.setRole(Role.valueOf(result.getString("role")));
-			 }
-		} catch (SQLException se) {
-		    se.printStackTrace();
-		}
-		return Optional.ofNullable(user);
+	        if (rs.next()) {
+	            // Email found, return user object
+	            String password = rs.getString("password");
+	            String fullName = rs.getString("fullname");
+	            String role = rs.getString("role");
+	            User user = new User(email, password, fullName, Role.valueOf(role));
+	            return Optional.of(user);
+	        } else {
+	            // Email not found
+	            return Optional.empty();
+	        }
+	    } catch (SQLException e) {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	    } finally {
+	        // Fermer la ressource ResultSet et PreparedStatement
+	        try {
+	            if (selectStmt != null) {
+	                selectStmt.close();
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	    return Optional.empty();
 	}
+
 
 	@Override
 	public synchronized List<User> findAll() {
@@ -191,19 +204,15 @@ public class UserRepository implements UserInterface {
 
 	    try {
 	        // Check if email already exists
-	        String selectSql = "SELECT * FROM users WHERE email = ?";
-	        PreparedStatement selectStmt = connect.prepareStatement(selectSql);
-	        selectStmt.setString(1, user.getEmail());
-	        ResultSet rs = selectStmt.executeQuery();
-	        if (rs.next()) {
+	        if (findByEmail(user.getEmail()).isPresent()) {
 	            // Email already exists, throw exception or handle error
 	            throw new SQLException("Email already exists");
 	        }
 
 	        // Insert new user
-	        pstmt = connect.prepareStatement(sql);
+	        PreparedStatement pstmt = connect.prepareStatement(sql);
 	        pstmt.setString(1, user.getEmail());
-	        pstmt.setString(2, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+	        pstmt.setString(2, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
 	        pstmt.setString(3, user.getFullName());
 	        pstmt.setString(4, user.getRole().toString());
 	        pstmt.executeUpdate();
