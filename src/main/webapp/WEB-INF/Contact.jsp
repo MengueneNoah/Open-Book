@@ -1,17 +1,28 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+=======
+>>>>>>> afe7fe70395e081c5f19c2ee0978642e8d7fbbda
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>Contacts page</title>
+=======
+    <title>OpenBook - Contacts</title>
+>>>>>>> afe7fe70395e081c5f19c2ee0978642e8d7fbbda
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> afe7fe70395e081c5f19c2ee0978642e8d7fbbda
 </head>
 
 <body>
@@ -98,7 +109,11 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> afe7fe70395e081c5f19c2ee0978642e8d7fbbda
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
